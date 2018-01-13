@@ -83,8 +83,9 @@ function getEnd() {
 
 function screencap() {
     ob_start();
-	system('adb shell screencap -p /sdcard/screen.png');
-	system('adb pull /sdcard/screen.png .');
+	// system('adb shell screencap -p /sdcard/screen.png');
+	// system('adb pull /sdcard/screen.png .');
+	system("adb shell screencap -p > screen.png");
     ob_end_clean();
 }
 
